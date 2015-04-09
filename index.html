@@ -3,11 +3,17 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.js"></script>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body ng-controller="controller">
     <div ng-click="toggle()">
-      <div ng-show="state">state = true</div>
-      <div ng-hide="state">state = false</div>
+      state = 
+      <span ng-show="state" class="true">
+        true
+      </span>
+      <span ng-hide="state" class="false">
+        false
+      </span>
     </div>
   </body>
 </html>
