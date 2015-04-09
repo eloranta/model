@@ -6,12 +6,17 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body ng-controller="controller as state">
-    <div ng-click="state.toggle()">
-      state = 
-      <span ng-show="state.value" class="true">true</span>
-      <span ng-hide="state.value" class="false">false</span>
+    <div ng-click="state.toggle(1)">
+      state1 = 
+      <span ng-show="state.value1" class="true">true</span>
+      <span ng-hide="state.value1" class="false">false</span>
+    </div>
+    <div ng-click="state.toggle(2)">
+      state2 = 
+      <span ng-show="state.value2" class="true">true</span>
+      <span ng-hide="state.value2" class="false">false</span>
     </div>
     <br>
-    <button ng-click="state.toggle()">Toggle state</button>
+    <button ng-click="state.toggle(3)">Toggle both</button>
   </body>
 </html>
