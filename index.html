@@ -8,12 +8,10 @@
   <body ng-controller="controller as state">
     <div ng-click="state.toggle()">
       state = 
-      <span ng-show="state.value" class="true">
-        true
-      </span>
-      <span ng-hide="state.value" class="false">
-        false
-      </span>
+      <span ng-show="state.value" class="true">true</span>
+      <span ng-hide="state.value" class="false">false</span>
     </div>
+    <br>
+    <button ng-click="state.toggle()">Toggle state</button>
   </body>
 </html>
