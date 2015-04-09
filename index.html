@@ -5,13 +5,13 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body ng-controller="controller">
-    <div ng-click="toggle()">
+  <body ng-controller="controller as state">
+    <div ng-click="state.toggle()">
       state = 
-      <span ng-show="state" class="true">
+      <span ng-show="state.value" class="true">
         true
       </span>
-      <span ng-hide="state" class="false">
+      <span ng-hide="state.value" class="false">
         false
       </span>
     </div>
