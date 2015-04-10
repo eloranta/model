@@ -1,9 +1,6 @@
-var app = angular.module('app',[]);
-
-app.controller('controller', function($scope) {
-  $scope.values = new Array(40);
-  for (i = 0; i < $scope.values.length; i++) {
-    $scope.values[i] = Math.random()<0.5;
-  }    
-});
- 
+    angular.module('numberExample', [])
+      .controller('ExampleController', ['$scope', function($scope) {
+        $scope.example = {
+          value: 12
+        };
+      }]);
