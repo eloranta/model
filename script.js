@@ -1,6 +1,6 @@
     angular.module('Locator', [])
       .controller('LocatorController', ['$scope', function($scope) {
-        $scope.grid = "II00aa";
+        $scope.grid = "KP11mk";
         $scope.pattern  = /^[A-Ra-r][A-Ra-r][0-9][0-9][A-Xa-x][A-Xa-x]$/;
         $scope.longitude = 0;
         $scope.latitude = 0
@@ -17,8 +17,7 @@
             var subGrid = (5 * temp[4]) / 60;
             var halfSubGrid = 1/24;
             var longitude = field + grid + subGrid + halfSubGrid;
-            console.log(longitude);  
-            return longitude;
+            return Math.round(longitude * 1000) / 1000;
         };
         $scope.toLatitude = function() {
             var grid = $scope.grid.toUpperCase();
@@ -32,7 +31,6 @@
             var subGrid = (2.5 * temp[5]) / 60;
             var halfSubGrid = 1/48;
             latitude = field + grid + subGrid + halfSubGrid;
-            console.log(latitude);  
-            return latitude;
+            return Math.round(latitude * 1000) / 1000;
         };
       }]);
